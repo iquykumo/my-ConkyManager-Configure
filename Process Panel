@@ -1,0 +1,85 @@
+# **********************************************************************
+# "CPU Panel (8-core)" theme for Conky by Tony George (teejee2008@gmail.com)
+#
+# Webpage: http://teejeetech.blogspot.in/
+# **********************************************************************
+
+
+background yes
+double_buffer yes
+
+alignment bottom_left
+
+border_width 1
+cpu_avg_samples 2
+default_color white
+default_outline_color white
+default_shade_color white
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+
+gap_x 40
+gap_y 80
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+
+own_window yes
+own_window_type normal
+own_window_transparent no
+own_window_colour 000000
+own_window_argb_visual yes
+own_window_argb_value 128
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+minimum_size 240 620
+stippled_borders 0
+update_interval 2.0
+uppercase no
+use_spacer none
+
+show_graph_scale no
+show_graph_range no
+
+use_xft yes
+xftalpha 0.1
+xftfont Droid Sans:size=10
+color0 white
+color1 EAEAEA
+color2 FFA300
+color3 grey
+
+TEXT
+${color2}CPU ${color0}${alignr}${cpu cpu0}%
+${cpubar cpu0 5,}
+${top name 1} $alignr ${top cpu 1}%
+${top name 2} $alignr ${top cpu 2}%
+${top name 3} $alignr ${top cpu 3}%
+${top name 4} $alignr ${top cpu 4}%
+${top name 5} $alignr ${top cpu 5}%
+${top name 6} $alignr ${top cpu 6}%
+${top name 7} $alignr ${top cpu 7}%
+${top name 8} $alignr ${top cpu 8}%
+
+${color2}RAM ${color0}${alignr}${mem}
+${membar 16,}
+${top_mem name 1} $alignr ${top_mem mem_res 1}
+${top_mem name 2} $alignr ${top_mem mem_res 2}
+${top_mem name 3} $alignr ${top_mem mem_res 3}
+${top_mem name 4} $alignr ${top_mem mem_res 4}
+${top_mem name 5} $alignr ${top_mem mem_res 5}
+${top_mem name 6} $alignr ${top_mem mem_res 6}
+${top_mem name 7} $alignr ${top_mem mem_res 7}
+${top_mem name 8} $alignr ${top_mem mem_res 8}
+${top_mem name 9} $alignr ${top_mem mem_res 9}
+${top_mem name 10} $alignr ${top_mem mem_res 10}
+${top_mem name 11} $alignr ${top_mem mem_res 11}
+${top_mem name 12} $alignr ${top_mem mem_res 12}
+${top_mem name 13} $alignr ${top_mem mem_res 13}
+${top_mem name 14} $alignr ${top_mem mem_res 14}
+${top_mem name 15} $alignr ${top_mem mem_res 15}
+${top_mem name 16} $alignr ${top_mem mem_res 16}
