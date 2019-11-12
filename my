@@ -42,7 +42,8 @@ ${font WenQuanYi Zen Hei:pixelsize=14}
 ${color #98c2c7}name:  ${color}$alignr$LOGNAME
 ${color #98c2c7}Hostname: ${color}$alignr$nodename
 ${color #98c2c7}locale: ${color}$alignr$LANG
-${color #98c2c7}mail:  ${color}$alignr 1208861396@qq.com
+${color #98c2c7}mail:  ${color}$alignr ${exec git config --get user.email}
+${color #98c2c7}mail:  ${color}$alignr 
 ${color #98c2c7}kernel  ${color}$alignr$kernel
 ${color #98c2c7}Machine:$alignr${color}$machine
 ${color #98c2c7}Temp: ${color}${alignr}${acpitemp} °C
