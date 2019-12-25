@@ -42,16 +42,17 @@ ${font WenQuanYi Zen Hei:pixelsize=14}
 ${color #98c2c7}name:  ${color}$alignr$LOGNAME
 ${color #98c2c7}Hostname: ${color}$alignr$nodename
 ${color #98c2c7}locale: ${color}$alignr$LANG
-${color #98c2c7}mail:  ${color}$alignr ${exec git config --get user.email}
-${color #98c2c7}mail:  ${color}$alignr 
+${color #98c2c7}mail:  ${color}$alignr ${exec git config --get user.email}'
 ${color #98c2c7}kernel  ${color}$alignr$kernel
 ${color #98c2c7}Machine:$alignr${color}$machine
 ${color #98c2c7}Temp: ${color}${alignr}${acpitemp} °C
 ${color #98c2c7}boot time: ${color}$alignr$uptime
+# 电池信息可通过 " upower -i `upower -e | grep 'BAT'` " 查看
 ${color #98c2c7}Battery:$alignr${color}${battery BAT1}
 
 ${color #98c2c7}CPU utilization: ${color}$cpu%
 $cpubar
+# 可根据cpu核心数自行调整
 CPU1 temperature: $alignr${exec sensors | grep 'Core 0' | cut -c17-25}
 CPU2 temperature: $alignr${exec sensors | grep 'Core 1' | cut -c17-25}
 CPU3 temperature: $alignr${exec sensors | grep 'Core 2' | cut -c17-25}
@@ -66,6 +67,7 @@ ${color #98c2c7}System disk utilization: ${color}${alignr}${fs_free /} / ${fs_si
 ${fs_bar}
 
 ${color #98c2c7}network:${color}
+# 网卡可通过 ipconfig 命令查看
     wired:
         download:$alignr${downspeed enp4s0  } k/s
         upload:$alignr${upspeed enp4s0  } k/s
