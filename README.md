@@ -13,7 +13,7 @@ ps:2019.12.25 更新(~~没有女朋友圣诞节一个人过~~)
 
 个人在不同的Debian系发行版桌面环境下均尝试过conky-manager, 包括
 
-+ Ubuntu18.04的GNOME与uity桌面
++ Ubuntu18.04的GNOME与unity桌面
 + deepin15.9及以上的自研dde桌面
 + Debian10.1.0的kde与xfce桌面
   
@@ -28,7 +28,7 @@ ps: 这个配置文件我是基本上照着网上别人的配置直接改的...
 [官网地址](https://teejeetech.in/conky-manager/)
 [官方github项目地址](https://github.com/teejee2008/conky-manager)
 
-##### 1. ppa源安装
+##### ppa源安装
 ``` shell
 sudo apt-add-repository -y ppa:teejee2008/ppa
 sudo apt-get update
