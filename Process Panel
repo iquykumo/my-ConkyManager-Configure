@@ -55,7 +55,7 @@ color3 grey
 
 TEXT
 ${color2}CPU ${color0}${alignr}${cpu cpu0}%
-${cpubar cpu0 5,}
+${cpubar cpu0 8,}
 ${top name 1} $alignr ${top cpu 1}%
 ${top name 2} $alignr ${top cpu 2}%
 ${top name 3} $alignr ${top cpu 3}%
@@ -66,7 +66,7 @@ ${top name 7} $alignr ${top cpu 7}%
 ${top name 8} $alignr ${top cpu 8}%
 
 ${color2}RAM ${color0}${alignr}${mem}
-${membar 16,}
+${membar 8,}
 ${top_mem name 1} $alignr ${top_mem mem_res 1}
 ${top_mem name 2} $alignr ${top_mem mem_res 2}
 ${top_mem name 3} $alignr ${top_mem mem_res 3}
@@ -77,9 +77,10 @@ ${top_mem name 7} $alignr ${top_mem mem_res 7}
 ${top_mem name 8} $alignr ${top_mem mem_res 8}
 ${top_mem name 9} $alignr ${top_mem mem_res 9}
 ${top_mem name 10} $alignr ${top_mem mem_res 10}
-${top_mem name 11} $alignr ${top_mem mem_res 11}
-${top_mem name 12} $alignr ${top_mem mem_res 12}
-${top_mem name 13} $alignr ${top_mem mem_res 13}
-${top_mem name 14} $alignr ${top_mem mem_res 14}
-${top_mem name 15} $alignr ${top_mem mem_res 15}
-${top_mem name 16} $alignr ${top_mem mem_res 16}
+
+${color2}GPU${color0}$alignr${exec nvidia-smi | grep '4042' | cut -c60-64 }
+${exec nvidia-smi | grep "No running processes found" | cut -c2-30} ${exec nvidia-smi | sed -n '16p' | grep -v "No running processes found" | cut -c27-34  }$alignr${exec nvidia-smi | sed -n '16p' | cut -c70-78  }
+${exec nvidia-smi | sed -n '17p' | grep -v "------" | cut -c27-34  }$alignr${exec nvidia-smi | sed -n '17p' | grep -v "------" | cut -c70-78  }
+${exec nvidia-smi | sed -n '18p' | grep -v "------" | cut -c27-34  }$alignr${exec nvidia-smi | sed -n '18p' | grep -v "------" | cut -c70-78  }
+${exec nvidia-smi | sed -n '19p' | grep -v "------" | cut -c27-34  }$alignr${exec nvidia-smi | sed -n '19p' | grep -v "------" | cut -c70-78  }
+${exec nvidia-smi | sed -n '20p' | grep -v "------" | cut -c27-34  }$alignr${exec nvidia-smi | sed -n '20p' | grep -v "------" | cut -c70-78  }
