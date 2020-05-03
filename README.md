@@ -43,4 +43,4 @@ sudo gdebi conky-manager*.deb
 ```
 
 效果图
-![Debian10+kde效果图1](example/ex1.png)
+![Debian10+kde效果图1](example/ex2.png)
